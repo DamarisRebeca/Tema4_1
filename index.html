@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema4_1</title>
+</head>
+<body>
+
+    <input type="number" id="input_number">
+    <button style="font-size: medium;" id="add" onclick="addArray()">add</button>
+    <br><br>
+    <button style="font-size: medium;" id="check_max" onclick="checkMax()">CheckMax</button>
+    <br><br>
+    <button style="font-size: medium;" id="suma" onclick="suma()">Suma</button>
+    <p id="print_checkmax"></p>
+    <br><br>
+    <p id="print_suma"></p>
+    <br><br>
+    
+
+
+
+   
+
+</body>
+<script>
+
+    let array1=[]
+    i=0
+
+    function addArray(){
+        let x=0
+        x=Number(document.getElementById("input_number").value)
+        array1[i]=x
+        i++
+        console.log(array1)
+       document.getElementById("input_number").value=""
+    }
+    let sum=0
+    function suma(){
+        for( i = 0 ; i < array1.length ; i++ )
+        x = array1[i]
+    sum= x + sum
+    }
+    console.log(sum)
+    document.getElementById("print_suma").innerHTML="Suma:" +sum
+
+    function checkMax(){
+        let max = array1[0]
+            for( i = 0 ; i < array1.length ; i++){
+                if(array1[i] > max){
+                    max=array1[i]
+                }
+            }
+            console.log(array1)
+            document.getElementById("print_checkmax").innerHTML="Cel mai mare nr:" +max
+            console.log(max)
+        
+    }
+
+</script>
+
+
+</html>
